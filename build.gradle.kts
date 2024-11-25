@@ -64,14 +64,3 @@ project(":configlib-bukkit") {
 
     tasks.jar { from(project(":configlib-core").sourceSets["main"].output) }
 }
-project(":configlib-bungee") {
-    repositories {
-        maven(url = "https://oss.sonatype.org/content/repositories/snapshots")
-    }
-    dependencies {
-        implementation(project(":configlib-core"))
-        implementation("net.md-5:bungeecord-api:1.12-SNAPSHOT")
-    }
-
-    tasks.jar { from(project(":configlib-core").sourceSets["main"].output) }
-}
